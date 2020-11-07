@@ -4,17 +4,12 @@ import time
 
 import voluptuous as vol
 
-from RPi import GPIO  # pylint: disable=import-error
 from homeassistant.components import rpi_gpio
 from homeassistant.components.light import PLATFORM_SCHEMA, LightEntity
 from homeassistant.const import CONF_NAME
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.reload import setup_reload_service
-import uuid
-import logging
 from . import DOMAIN, PLATFORMS
-
-_LOGGER = logging.getLogger(__name__)
 
 CONF_LIGHT = "lights"
 CONF_RELAY_PIN = "relay_pin"
